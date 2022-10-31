@@ -1,0 +1,29 @@
+.searchmenu {
+    position: absolute;
+    display: grid;
+    margin-top: 5px;
+	min-height: 100px;
+    width: 300px;
+    background-color: var(--color-grey-lighten);
+}
+
+.searchmenu--closed {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+
+.searchmenu_item {
+    line-height: 40px;
+    display: block;
+    color: var(--color-white-dimmed);
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.searchmenu_item:hover {
+    color: #b51586;
+    background-color: #373737;
+    cursor: pointer;
+}
+
