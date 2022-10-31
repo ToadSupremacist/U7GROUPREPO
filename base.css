@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+:root { --break-point-maximum: 1700px; --row-padding: 50px; --margin-top-1: 85px; --margin-top-2: 30px; --title-font-size: 32px; --reaction-time-in: 0.03s; --reaction-time-out: 0.05s; --color-grey: #222222; --color-grey-lighten: #404040; --color-white-dimmed: #eeeeee; --color-pink: #b51586; --color-pink-lighten: #f53dc0; --line-height-lists-of-links: 37px; --font-size-basic: 18px; }
+
+html { box-sizing: border-box; }
+
+*, ::before, ::after { box-sizing: inherit; }
+
+.visually-hidden:not(:focus):not(:active) { clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); height: 1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
+
+.show { outline: rgb(0, 0, 0) dotted 1px; }
+
+.link, .link:visited { color: rgb(181, 21, 134); text-decoration: none; border-bottom: 2px solid rgb(181, 21, 134); padding-bottom: 2px; transition: border-bottom-color 0.03s linear 0s; }
+
+.link:focus, .link:hover { color: rgb(245, 61, 192); border-bottom-color: rgb(245, 61, 192); transition: border-bottom-color 0.03s linear 0s; }
+
+.link[href=""] { cursor: default; }
+
+.link--white:link, .link--white:visited { color: var(--color-white-dimmed); }
+
+.link--white:hover { color: var(--color-white); text-shadow: rgb(136, 136, 136) 0px 0px 30px; }
+
+.link--white:focus { outline: none; color: var(--color-pink-lighten); text-shadow: rgb(136, 136, 136) 0px 0px 30px; }
+
+.link--white.link--active { color: var(--color-pink-lighten); text-shadow: none; border-bottom: none; }
+
+.link--block { border-bottom: none; box-shadow: rgb(51, 51, 51) 0px 0px 50px; }
+
+.link--block:hover { box-shadow: rgb(68, 68, 68) 0px 0px 50px; }
+
+.link--block:focus { outline: 2px solid var(--color-pink-lighten); box-shadow: rgb(68, 68, 68) 0px 0px 50px; }
+
+.link--dashed { border-bottom-style: dotted; }
+
+.link--triangled::after { content: " ▾"; font-size: 20px; }
+
+body { font-family: Roboto, system-ui, sans-serif; font-size: 18px; line-height: 1.4; display: flex; flex-direction: column; background-color: rgb(34, 34, 34); color: rgb(255, 255, 255); border-top: 15px solid rgb(181, 21, 134); }

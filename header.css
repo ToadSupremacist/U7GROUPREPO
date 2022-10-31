@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.header { background-color: rgb(238, 238, 238); box-shadow: rgb(0, 0, 0) 0px 40px 70px 5px; }
+
+.header__wrapper { max-width: 1700px; display: flex; flex-wrap: wrap; align-items: center; margin-left: auto; margin-right: auto; padding-left: 50px; padding-right: 50px; }
+
+.header__toggle { height: 130px; width: 130px; cursor: pointer; background-color: transparent; padding: 0px; border: 0px; margin-left: -40px; background-image: url("/images/open-menu-50.svg"); background-size: 50px 50px; background-repeat: no-repeat; background-position: center center; }
+
+.header__logo { margin-left: 20px; height: 130px; width: 114px; background-color: transparent; background-image: url("/images/logo.png"); background-repeat: no-repeat; background-position: center center; }
+
+.header__lang { display: block; margin-left: auto; }
+
+.header__menu { overflow: hidden; min-width: 100%; margin-top: 60px; margin-bottom: 60px; }
+
+.header__menu--closed { display: none; }
+
+.navigation__list { padding-left: 0px; list-style: none; margin-top: 0px; margin-bottom: 40px; line-height: 50px; }
+
+.navigation__link { font-size: 32px; font-weight: 700; border-bottom-width: 2px; }
+
+.navigation__subscription { margin-top: 0px; margin-bottom: 40px; }
+
+.subscription { display: flex; flex-wrap: wrap; }
+
+.subscription__label { color: rgb(181, 21, 134); display: block; font-size: 32px; font-weight: 700; line-height: 1.2; margin-bottom: 13px; width: 100%; }
+
+.subscription__input { min-height: 50px; border-width: 2px; border-style: solid; border-color: rgb(181, 21, 134); background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); padding-left: 10px; padding-right: 10px; line-height: 1; flex-grow: 1; max-width: 50%; }
+
+.subscription__input:focus { outline: 0px; border-color: rgb(232, 59, 182); }
+
+.subscription__submit { min-height: 50px; border-width: 2px 2px 2px 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-color: rgb(181, 21, 134); border-right-color: rgb(181, 21, 134); border-bottom-color: rgb(181, 21, 134); background-color: rgb(255, 255, 255); color: rgb(181, 21, 134); padding-left: 10px; padding-right: 10px; line-height: 1; border-left-style: initial; border-left-color: initial; cursor: pointer; }
+
+.subscription__submit:focus, .subscription__submit:hover { outline: 0px; border-color: rgb(232, 59, 182); color: rgb(232, 59, 182); }

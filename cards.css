@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.cards { list-style: none; padding-left: 0px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 35px; }
+
+.cards__item { flex-basis: 230px; flex-grow: 1; }
+
+.card:hover { filter: brightness(1.5); }
+
+.card__link { position: relative; }
+
+.card__description { position: absolute; display: flex; flex-direction: column; bottom: 0px; }
+
+.card__title { margin-top: 0px; margin-bottom: 0px; padding-left: 10px; padding-right: 10px; color: rgb(255, 255, 255); font-size: 24px; font-weight: 400; text-shadow: rgb(0, 0, 0) 1px 1px 10px; }
+
+.card__duration { margin-top: 0px; margin-bottom: 0px; color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 1px 1px 10px; padding-left: 10px; padding-right: 10px; }

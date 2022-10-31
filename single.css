@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.single { display: flex; flex-wrap: wrap; }
+
+.single__row { max-width: 1700px; margin-left: auto; margin-right: auto; padding-left: 50px; padding-right: 50px; display: flex; margin-top: 50px; }
+
+.single__cover { background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url("/sample-2.jpg"); min-height: 55vmin; display: flex; flex-direction: column; flex-basis: 100%; }
+
+.single__title { margin: auto auto 30px; width: 100%; max-width: 1700px; font-size: 60px; font-weight: 400; text-shadow: rgb(0, 0, 0) 1px 1px 10px; padding-left: 50px; padding-right: 50px; color: rgb(221, 221, 221); }
+
+.single__synopsis { flex-grow: 1; }
+
+.single__description { width: 50%; padding-left: 50px; }
+
+.single__description-list { margin-top: 20px; padding-left: 0px; margin-bottom: 0px; }
+
+.single__description-list li { list-style: none; }
+
+.single__description-list span { opacity: 0.5; }
+
+.single__synopsis p { color: rgb(221, 221, 221); margin-top: 0px; margin-bottom: 20px; line-height: 1.5; font-weight: 400; }

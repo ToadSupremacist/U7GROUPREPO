@@ -1,39 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@charset "utf-8";
 
-@import "normalize.css";
-@import "base.css";
-@import "header.css";
-@import "main.css";
-@import "search.css";
-@import "cards.css";
-@import "footer.css";
-@import "single.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 
+@import url("normalize.css");
 
-.searchmenu {
-  /*display: grid;*/
-  position: absolute;
-  margin-top: 5px;
-  width: 300px;
-  /*grid-template-rows: repeat(4, 1fr);*/
-  background-color: #313131;
-}
+@import url("base.css");
 
-.searchmenu--closed {
-  overflow: hidden;
-  height: 0;
-  width: 0;
-}
+@import url("header.css");
 
-.searchmenu_item {
-  color: #767676;
-  font-size: 16px;
-  font-weight: 400;
-  padding-left: 5px;
-  line-height: 42px;
-}
+@import url("main.css");
 
-.searchmenu_item:hover {
-  color: #fe84c5;
-  background-color: #515151;
-}
+@import url("search.css");
+
+@import url("cards.css");
+
+@import url("footer.css");
+
+@import url("single.css");
+
+.searchmenu { position: absolute; margin-top: 5px; width: 300px; background-color: rgb(49, 49, 49); }
+
+.searchmenu--closed { overflow: hidden; height: 0px; width: 0px; }
+
+.searchmenu_item { color: rgb(118, 118, 118); font-size: 16px; font-weight: 400; padding-left: 5px; line-height: 42px; }
+
+.searchmenu_item:hover { color: rgb(254, 132, 197); background-color: rgb(81, 81, 81); }
