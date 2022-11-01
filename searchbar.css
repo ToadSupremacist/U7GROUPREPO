@@ -13,17 +13,21 @@
     width: 0;
 }
 
-.searchmenu_item {
+.searchmenu_link {
     line-height: 40px;
     display: block;
-    color: var(--color-white-dimmed);
     font-size: 18px;
     padding-left: 5px;
+    display: block;
+    text-decoration: none;
+    color: var(--color-white-dimmed);
 }
 
 .searchmenu_item:hover {
-    color: #b51586;
     background-color: #373737;
     cursor: pointer;
 }
 
+.searchmenu_link:hover {
+    color: #b51586;
+}
