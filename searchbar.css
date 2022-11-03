@@ -23,11 +23,8 @@
     color: var(--color-white-dimmed);
 }
 
-.searchmenu_item:hover {
+.searchmenu_link:hover, .searchmenu_link:focus, .searchmenu_item:focus {
+    color: var(--color-pink-lighten);
     background-color: #373737;
-    cursor: pointer;
-}
-
-.searchmenu_link:hover {
-    color: #b51586;
+    outline: none;
 }
