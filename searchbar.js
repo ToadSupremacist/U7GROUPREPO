@@ -4,8 +4,6 @@ const srchmenu_items = srchmenu.querySelectorAll(".searchmenu_item");
 const main_area = document.querySelector(".main");
 const form = document.querySelector(".search");
 
-
-
 function showSearch() {
     let i = 1
     srchmenu.classList.remove("searchmenu--closed")
@@ -22,25 +20,33 @@ function hideSearch() {
     }
 };
 
-let i = 0;
+// down/up arrows focus on elements of menu
+let count = 0;
+let child = srchmenu.firstElementChild;
 
 form.addEventListener("keydown", (event) => {
     if (event.code == "ArrowDown") {
-        event.preventDefault()
-        srchmenu_items[i].focus({preventScroll:true})
-        i += 1
-    }
-});
-
-form.addEventListener("keydown", (event) => {
-    if (event.code == "ArrowUp") {
-        event.preventDefault()
-        srchmenu_items[i-1].focus({preventScroll:true})
-        i -= 1
+        count += 1;
+        event.preventDefault();
+        child.nextElementSibling.focus({preventScroll:true});
+        child = child.nextElementSibling;
+    }else if (event.code == "ArrowDown" && count == 4){
+        event.preventDefault();
+        child = srchmenu.firstElementChild;
+        srchmenu.firstElementChild.focus({preventScroll:true});
+        count = 0;
+    }else if (event.code == "ArrowUp") {
+        count -= 1;
+        event.preventDefault();
+        child.previousElementSibling.focus({preventScroll:true});
+        child = child.previousElementSibling;
+    }else if (event.code == "ArrowUp" && count == 0) {
+        event.preventDefault();
+        child = srchmenu.lastElementChild;
+        srchmenu.lastElementChild.focus({preventScroll:true});
+        count = 4;
     }
 });
 
 main_area.addEventListener("click", hideSearch);
 srchinput.addEventListener("input", showSearch);
-
-
