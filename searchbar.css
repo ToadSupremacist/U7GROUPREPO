@@ -21,6 +21,7 @@
     display: block;
     text-decoration: none;
     color: var(--color-white-dimmed);
+    overflow: hidden;
 }
 
 .searchmenu_link:hover, .searchmenu_link:focus, .searchmenu_item:focus {

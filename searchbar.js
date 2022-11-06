@@ -13,7 +13,7 @@ function showSearch() {
     }
 };
 
-function hideSearch() {
+function hideSearch(event) {
     srchmenu.classList.add("searchmenu--closed")
     for (el of srchmenu_items) {
         el.setAttribute("tabindex", -1)
