@@ -10,6 +10,52 @@ class Program {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////
+//adds characters from user input to keysPressed string
+let keysPressed = "";
+searchinput.addEventListener("keypress", (event) => {
+    keysPressed += event.key;
+});
+
+//removes last letter on backspace
+searchinput.addEventListener("keydown", (event) => {
+    if (event.code == "Backspace" && keysPressed.length > 0) {
+        keysPressed = keysPressed.slice(0, keysPressed.length - 1) 
+        + keysPressed.slice(keysPressed.length, keysPressed.length);
+    }
+});
+
+///////////////////////////////////////////////////////////////////////////
+//compares input with arrays of total programs and programs already in the search menu
+//returns matches into validResults array
+let progsInMenu = [];
+
+function addProgs() {
+    let i = 0;
+    let validResults = [];
+    for (el of progArray) {
+        const lowerCaseRu = el.ruName.toLowerCase();
+        const lowerCaseEng = el.engName.toLowerCase();
+        const lowerCaseKeys = keysPressed.toLowerCase();
+        if (lowerCaseRu.includes(lowerCaseKeys) || lowerCaseEng.includes(lowerCaseKeys)) {
+            validResults.push(el.ruName);
+        }
+    }
+    for (el of validResults) {
+        if (progsInMenu.includes(el) == false){
+            searchmenu_links[i].innerHTML = el;
+            progsInMenu.push(el);
+            progsInMenu.sort();
+            i++;
+        }else if (progsInMenu.includes(el)&&el.includes(keysPressed)==false){
+            progsInMenu.pop(el);
+        }
+    }
+}
+
+searchinput.addEventListener("input", addProgs);
+
+
 const progArray = [
     new Program("Сколько стоит кит?", "My Little Pony", "0550"),
     new Program("Дневники дикой природы", "My Little Pony", "0549"),
@@ -529,50 +575,3 @@ const progArray = [
     new Program("Автолегенды", "My Little Pony", "0001"),
     new Program("Гнев стихии", "My Little Pony", "0000"),
 ];
-
-///////////////////////////////////////////////////////////////////////////
-//adds characters from user input to keysPressed string
-let keysPressed = "";
-searchinput.addEventListener("keypress", (event) => {
-    keysPressed += event.key;
-});
-
-//removes last letter on backspace
-searchinput.addEventListener("keydown", (event) => {
-    if (event.code == "Backspace" && keysPressed.length > 0) {
-        keysPressed = keysPressed.slice(0, keysPressed.length - 1) 
-        + keysPressed.slice(keysPressed.length, keysPressed.length);
-    }
-});
-
-///////////////////////////////////////////////////////////////////////////
-//compares input with arrays of total programs and programs already in the search menu
-//returns matches into validResults array
-let progsInMenu = [];
-
-function addProgs() {
-    let i = 0;
-    let validResults = [];
-    for (el of progArray) {
-        const lowerCaseRu = el.ruName.toLowerCase();
-        const lowerCaseEng = el.engName.toLowerCase();
-        const lowerCaseKeys = keysPressed.toLowerCase();
-        if (lowerCaseRu.includes(lowerCaseKeys) || lowerCaseEng.includes(lowerCaseKeys)) {
-            validResults.push(el.ruName);
-        }
-    }
-    for (el of validResults) {
-        if (progsInMenu.includes(el) == false){
-            searchmenu_links[i].innerHTML = el;
-            progsInMenu.push(el);
-            progsInMenu.sort();
-            i++;
-        }else if (progsInMenu.includes(el)&&el.includes(keysPressed)==false){
-            progsInMenu.pop(el);
-        }
-    }
-}
-
-searchinput.addEventListener("input", addProgs);
-
-
